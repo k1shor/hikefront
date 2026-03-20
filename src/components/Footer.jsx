@@ -89,7 +89,7 @@ const Footer = () => {
         </div>
 
         <div className="pt-8 border-t border-[#2f3b45]/8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-sm text-[#7a8694]">
-          <p>All Rights Reserved © 2023 - HikeHub</p>
+          <p>All Rights Reserved © 2026 - HikeHub</p>
           <div className="flex gap-5 text-[11px] font-semibold uppercase tracking-[0.25em] text-[#52606d]">
             <span>Visa</span>
             <span>Mastercard</span>

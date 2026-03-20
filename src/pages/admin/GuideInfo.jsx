@@ -14,6 +14,7 @@ import {
 import { getAllUsers } from "../../api/userAPI";
 import { getAllBookings } from "../../api/bookingApi";
 import { isLoggedIn } from "../../api/authAPI";
+import { Link } from "react-router-dom";
 
 const GuidesInfo = () => {
   const [guides, setGuides] = useState([]);
@@ -119,11 +120,10 @@ const GuidesInfo = () => {
                 >
                   {/* Top Status Banner */}
                   <div
-                    className={`px-6 py-3 text-[10px] font-black uppercase tracking-widest flex justify-between items-center ${
-                      isBooked
+                    className={`px-6 py-3 text-[10px] font-black uppercase tracking-widest flex justify-between items-center ${isBooked
                         ? "bg-amber-50 text-amber-600"
                         : "bg-emerald-50 text-emerald-600"
-                    }`}
+                      }`}
                   >
                     <span className="flex items-center gap-2">
                       {isBooked ? (
@@ -162,11 +162,10 @@ const GuidesInfo = () => {
 
                     {/* Booking Details */}
                     <div
-                      className={`rounded-2xl border-2 border-dashed p-5 ${
-                        isBooked
+                      className={`rounded-2xl border-2 border-dashed p-5 ${isBooked
                           ? "bg-white border-[#004d4d]/20"
                           : "bg-slate-50 border-slate-100"
-                      }`}
+                        }`}
                     >
                       {isBooked ? (
                         <div className="space-y-4">
@@ -231,6 +230,12 @@ const GuidesInfo = () => {
                         Exp: {guide.experience || 0}yrs
                       </span>
                     </div>
+                    <Link
+                      to={`/admin/profile/${guide._id}`}
+                      className="mt-4 flex items-center justify-center gap-2 bg-[#004d4d] text-white text-sm font-semibold py-2 rounded-xl hover:bg-[#003737] transition-all"
+                    >
+                      View Profile <FaArrowRight size={12} />
+                    </Link>
                   </div>
                 </div>
               );

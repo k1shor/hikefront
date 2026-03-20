@@ -169,9 +169,9 @@ const ContactPage = () => {
                     Tel
                   </h3>
                   <p className="text-sm md:text-base text-gray-700 leading-7">
-                    01-6644551
+                    01-5544708
                     <br />
-                    01-6622332
+                    01-5544709
                   </p>
                 </div>
 
@@ -195,7 +195,9 @@ const ContactPage = () => {
                     Emergency contact only
                   </p>
                   <p className="text-sm md:text-base font-semibold text-gray-800">
-                    977-9988776655
+                    977-9801000055
+                    <br />
+                    977-9801000056
                   </p>
                 </div>
 
@@ -204,9 +206,9 @@ const ContactPage = () => {
                     Address
                   </h3>
                   <p className="text-sm md:text-base leading-7 text-gray-600">
-                    Mahalaxmisthan, Kathmandu
+                    Thamel, Kathmandu
                     <br />
-                    Gathaghar, Bhaktapur
+                    NewRoad, Pokhara
                   </p>
                 </div>
               </div>

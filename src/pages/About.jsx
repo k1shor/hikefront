@@ -53,10 +53,7 @@ const About = () => {
           </div>
 
           <p className="text-gray-600 leading-7 text-sm md:text-base max-w-2xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-            tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. We
-            create thoughtful travel experiences that combine reliability,
-            comfort, and memorable destinations with service you can trust.
+            
           </p>
         </div>
 

@@ -34,6 +34,7 @@ import CustomTour from './pages/CustomTour';
 import ManageActivity from './pages/admin/ManageActivity';
 import Activities from './pages/admin/Activities';
 import CustomTourList from './pages/admin/CustomTourList';
+import UserProfilePage from './pages/admin/UserProfilePage';
 
 
 const MyRoutes = () => {
@@ -85,6 +86,7 @@ const MyRoutes = () => {
             <Route path="manage-activity" element={<ManageActivity />} />
             <Route path="activities" element={<Activities />} />
             <Route path="custom-tour-list" element={<CustomTourList />} />
+            <Route path='profile/:id' element = {<UserProfilePage/>}/>
 
 
           </Route>

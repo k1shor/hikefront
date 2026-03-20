@@ -1,4 +1,4 @@
-const BASE_URL = "/api/activities";
+const BASE_URL = "http://localhost:8000/api/activities";
 
 const getAuthToken = () => {
   const authData = localStorage.getItem("auth");

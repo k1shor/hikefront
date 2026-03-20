@@ -9,10 +9,12 @@ import {
   FaClock,
   FaWeightHanging,
   FaMoneyBillWave,
+  FaArrowRight,
 } from "react-icons/fa";
 import { getAllUsers } from "../../api/userAPI";
 import { getAllBookings } from "../../api/bookingApi";
 import { isLoggedIn } from "../../api/authAPI";
+import { Link } from "react-router-dom";
 
 const PortersInfo = () => {
   const [porters, setPorters] = useState([]);
@@ -60,7 +62,7 @@ const PortersInfo = () => {
 
   const getActiveAssignment = (porterId) => {
     return bookings.find((b) => {
-      const bPorterId = b.porterId?._id || b.porterId; 
+      const bPorterId = b.porterId?._id || b.porterId;
       return (
         bPorterId === porterId &&
         (b.status === "confirmed" || b.status === "pending")
@@ -117,11 +119,10 @@ const PortersInfo = () => {
                 >
                   {/* Status Banner */}
                   <div
-                    className={`px-6 py-3 text-[10px] font-black uppercase tracking-widest flex justify-between items-center ${
-                      isBooked
+                    className={`px-6 py-3 text-[10px] font-black uppercase tracking-widest flex justify-between items-center ${isBooked
                         ? "bg-amber-50 text-amber-600"
                         : "bg-blue-50 text-blue-600"
-                    }`}
+                      }`}
                   >
                     <span className="flex items-center gap-2">
                       {isBooked ? <FaClock className="animate-pulse" /> : <FaCheckCircle />}
@@ -155,11 +156,10 @@ const PortersInfo = () => {
                     </div>
 
                     <div
-                      className={`rounded-2xl border-2 border-dashed p-5 ${
-                        isBooked
+                      className={`rounded-2xl border-2 border-dashed p-5 ${isBooked
                           ? "bg-white border-orange-200"
                           : "bg-slate-50 border-slate-100"
-                      }`}
+                        }`}
                     >
                       {isBooked ? (
                         <div className="space-y-4">
@@ -207,6 +207,12 @@ const PortersInfo = () => {
                         Exp: {porter.experience || 0}yrs
                       </span>
                     </div>
+                    <Link
+                      to={`/admin/profile/${porter._id}`}
+                      className="mt-4 flex items-center justify-center gap-2 bg-[#004d4d] text-white text-sm font-semibold py-2 rounded-xl hover:bg-[#003737] transition-all"
+                    >
+                      View Profile <FaArrowRight size={12} />
+                    </Link>
                   </div>
                 </div>
               );
